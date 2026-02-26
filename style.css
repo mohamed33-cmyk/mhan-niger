@@ -1,0 +1,461 @@
+/* ── VARIABLES DE COULEURS MHAN-NIGER ── */
+:root {
+  --bleu-fonce: #0a1628;
+  --bleu-moyen: #0d2d6b;
+  --bleu-principal: #1a4fc4;
+  --bleu-vif: #2563eb;
+  --blanc: #ffffff;
+  --gris-clair: #f0f4ff;
+  --texte-gris: rgba(255, 255, 255, 0.6);
+}
+
+/* ── RESET GENERAL ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bleu-fonce);
+  color: var(--blanc);
+}
+
+/* ── NAVIGATION ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background-color: rgba(10, 22, 40, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blanc);
+  letter-spacing: -0.5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--blanc);
+}
+
+/* ── SECTION HERO ── */
+#accueil {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 6% 80px;
+  background: linear-gradient(
+    135deg,
+    #0a1628 0%,
+    #0d2d6b 50%,
+    #0a1628 100%
+  );
+}
+
+#accueil h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+#accueil h1 span {
+  color: #3b82f6;
+}
+
+#accueil p {
+  font-size: 1.1rem;
+  color: var(--texte-gris);
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+
+#accueil a {
+  display: inline-block;
+  background-color: var(--bleu-vif);
+  color: var(--blanc);
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#accueil a:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* ── SECTIONS GENERALES ── */
+section {
+  padding: 100px 6%;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* ── SECTION SERVICES ── */
+#services {
+  background-color: #0d1e3e;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px 24px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bleu-vif);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--texte-gris);
+  line-height: 1.7;
+}
+
+/* ── SECTION À PROPOS ── */
+#apropos {
+  background-color: var(--bleu-fonce);
+  text-align: center;
+}
+
+#apropos p {
+  font-size: 1rem;
+  color: var(--texte-gris);
+  line-height: 1.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── SECTION ESPACE CLIENT ── */
+#client {
+  background-color: #0d1e3e;
+  text-align: center;
+}
+
+/* ── FORMULAIRES ── */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--blanc);
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--bleu-vif);
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--bleu-vif), #3b82f6);
+  color: var(--blanc);
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+}
+
+/* ── SECTION CONTACT ── */
+#contact {
+  background-color: var(--bleu-fonce);
+}
+
+/* ── FOOTER ── */
+footer {
+  background-color: #060f1e;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 30px 6%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE — TABLETTE (max 900px)
+════════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* La grille services passe de 4 colonnes à 2 */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Le titre hero devient plus petit */
+  #accueil h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Les sections ont moins de padding */
+  section {
+    padding: 80px 5%;
+  }
+
+}
+
+
+/* ════════════════════════════════════════
+   RESPONSIVE — MOBILE (max 600px)
+════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* ── NAVBAR ── */
+  nav ul {
+    display: none; /* On cache le menu sur mobile */
+  }
+
+  nav {
+    padding: 16px 5%;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  /* ── HERO ── */
+  #accueil {
+    padding: 100px 5% 60px;
+  }
+
+  #accueil h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  #accueil p {
+    font-size: 0.95rem;
+  }
+
+  #accueil a {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* ── TITRES DES SECTIONS ── */
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+
+  /* ── SERVICES : 1 colonne sur mobile ── */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 24px 20px;
+  }
+
+  /* ── FORMULAIRES ── */
+  form {
+    padding: 0 4px;
+  }
+
+  input, textarea {
+    font-size: 1rem; /* Évite le zoom automatique sur iOS */
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 24px 5%;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* ── BOUTON HAMBURGER ── */
+#btnHamburger {
+  display: none; /* Caché sur ordinateur */
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.3rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+  #btnHamburger {
+    display: block; /* Visible sur mobile */
+  }
+
+  /* Menu mobile ouvert */
+  #menuPrincipal.ouvert {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 22, 40, 0.98);
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    z-index: 200;
+  }
+
+  #menuPrincipal.ouvert li a {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+}
+
+/* ── ONGLETS AUTH ── */
+.auth-onglets {
+    display: flex;
+    gap: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.onglet {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.onglet.actif {
+    background: var(--bleu-vif);
+    color: var(--blanc);
+}
+
+/* ── DASHBOARD ── */
+.dash-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dash-avatar {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--bleu-principal), var(--bleu-vif));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.dash-stats {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.dash-stat {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: 12px;
+    padding: 20px 32px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.dash-stat div:last-child {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--texte-gris);
+    margin-top: 4px;
+}

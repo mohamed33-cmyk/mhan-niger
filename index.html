@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MHAN-Niger | Solutions Digitales</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- BARRE DE NAVIGATION -->
+    <!-- BARRE DE NAVIGATION -->
+<nav>
+  <div class="logo">MHAN-Niger</div>
+  <ul id="menuPrincipal">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#client">Espace Client</a></li>
+  </ul>
+  <!-- Bouton hamburger (visible uniquement sur mobile) -->
+  <button id="btnHamburger">☰</button>
+</nav>
+
+    <!-- SECTION HERO / ACCUEIL -->
+    <section id="accueil">
+      <h1>La transformation numérique<br/>du Niger commence ici.</h1>
+      <p>MHAN-Niger, votre partenaire technologique de confiance à Niamey.</p>
+      <a href="#services">Découvrir nos services</a>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services">
+      <h2>Nos Services</h2>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <h3>💻 Développement Digital</h3>
+          <p>Applications web, mobiles et solutions sur mesure.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>🔧 Réseaux & Informatique</h3>
+          <p>Installation, sécurisation et maintenance des infrastructures IT.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>🎨 Communication Digitale</h3>
+          <p>Création graphique, branding et identité visuelle.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>🛰️ Services Starlink</h3>
+          <p>Vente, installation et support des équipements Starlink.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION À PROPOS -->
+    <section id="apropos">
+      <h2>À propos de MHAN-Niger</h2>
+      <p>
+        Fondée en septembre 2025, MHAN-Niger est une entreprise technologique 
+        nigérienne spécialisée dans le développement de solutions digitales, 
+        l'intégration FinTech, la création de plateformes Web & Mobile, 
+        l'hébergement sécurisé et les réseaux informatiques.
+      </p>
+    </section>
+
+    <!-- SECTION ESPACE CLIENT -->
+    <!-- SECTION ESPACE CLIENT -->
+<section id="client">
+    <h2>Espace Client</h2>
+
+    <!-- FORMULAIRES CONNEXION / INSCRIPTION -->
+    <div id="authBox">
+
+        <!-- ONGLETS -->
+        <div class="auth-onglets">
+            <button class="onglet actif" 
+                onclick="basculerOnglet('connexion')">
+                Se connecter
+            </button>
+            <button class="onglet" 
+                onclick="basculerOnglet('inscription')">
+                S'inscrire
+            </button>
+        </div>
+
+        <!-- FORMULAIRE CONNEXION -->
+        <form id="formConnexion">
+            <input type="email" 
+                id="connexionEmail" 
+                placeholder="Votre email" 
+                required />
+            <input type="password" 
+                id="connexionMotDePasse" 
+                placeholder="Votre mot de passe" 
+                required />
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <!-- FORMULAIRE INSCRIPTION -->
+        <form id="formInscription" style="display:none;">
+            <input type="text" 
+                id="inscriptionNom" 
+                placeholder="Votre nom complet" 
+                required />
+            <input type="text" 
+                id="inscriptionEntreprise" 
+                placeholder="Votre entreprise" />
+            <input type="email" 
+                id="inscriptionEmail" 
+                placeholder="Votre email" 
+                required />
+            <select id="inscriptionService">
+                <option value="" disabled selected>
+                    Choisissez un service
+                </option>
+                <option>Développement Digital</option>
+                <option>Réseaux & Informatique</option>
+                <option>Communication Digitale</option>
+                <option>Services Starlink</option>
+            </select>
+            <input type="password" 
+                id="inscriptionMotDePasse" 
+                placeholder="Créez un mot de passe" 
+                required />
+            <button type="submit">Créer mon compte</button>
+        </form>
+
+    </div>
+
+    <!-- DASHBOARD (affiché après connexion) -->
+    <div id="dashboard" style="display:none;">
+        <div class="dash-header">
+            <div class="dash-avatar" id="dashAvatar">U</div>
+            <div>
+                <div id="dashNom">Utilisateur</div>
+                <div id="dashEmail">email@exemple.com</div>
+                <div id="dashRole">Client</div>
+            </div>
+        </div>
+        <div class="dash-stats">
+            <div class="dash-stat">
+                <div id="dashNbProjets">0</div>
+                <div>Projets actifs</div>
+            </div>
+            <div class="dash-stat">
+                <div>24/7</div>
+                <div>Support</div>
+            </div>
+        </div>
+        <button onclick="deconnecter()">Se déconnecter</button>
+    </div>
+
+</section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" />
+        <input type="email" placeholder="Votre email" />
+        <textarea placeholder="Votre message"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+      <p>© 2025 MHAN-Niger. Tous droits réservés. — Niamey, Niger</p>
+    </footer>
+<script src="api.js"></script>
+<script src="script.js"></script>
+  </body>
+
+</html>
