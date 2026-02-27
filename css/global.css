@@ -449,13 +449,78 @@ footer {
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+/* ════════════════════════════════════════
+   CORRECTIONS RESPONSIVE MOBILE ANDROID
+════════════════════════════════════════ */
+
+/* ── EMPÊCHER LE DÉBORDEMENT HORIZONTAL ── */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
-@media (max-width: 600px) {
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+* {
+  max-width: 100%;
+}
+
+/* ── NAVBAR MOBILE ── */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 14px 5%;
+    width: 100%;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+}
+
+/* ── FOOTER MOBILE ── */
+@media (max-width: 768px) {
+
+  footer {
+    padding: 48px 5% 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* ── BOUTONS GLOBAUX MOBILE ── */
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 24px;
+    font-size: 0.88rem;
+  }
+
+  /* ── SECTIONS GLOBALES ── */
+  section {
+    padding: 70px 5%;
+  }
+
 }

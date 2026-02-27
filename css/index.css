@@ -448,15 +448,185 @@
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .services-apercu-grid { grid-template-columns: 1fr; }
-  .pourquoi-grid { grid-template-columns: 1fr; gap: 48px; }
-  .compteurs-grid { grid-template-columns: repeat(2, 1fr); }
+/* ════════════════════════════════════════
+   CORRECTIONS RESPONSIVE MOBILE — index
+════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── HERO ── */
+  #hero {
+    padding: 100px 5% 60px;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-titre {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    letter-spacing: -1px;
+    word-break: break-word;
+  }
+
+  .hero-typing {
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    min-height: 40px;
+  }
+
+  .hero-sous-titre {
+    font-size: 0.88rem;
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hero-glow,
+  .hero-glow-2 {
+    display: none;
+  }
+
+  /* ── COMPTEURS ── */
+  #compteurs {
+    padding: 50px 5%;
+  }
+
+  .compteurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .compteur-nombre {
+    font-size: 2rem;
+  }
+
+  .compteur-label {
+    font-size: 0.72rem;
+  }
+
+  /* ── SERVICES APERÇU ── */
+  #services-apercu {
+    padding: 60px 5%;
+    overflow: hidden;
+  }
+
+  .services-apercu-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-apercu-card {
+    padding: 28px 22px;
+    width: 100%;
+  }
+
+  .card-numero {
+    font-size: 2.5rem;
+  }
+
+  /* ── POURQUOI NOUS ── */
+  #pourquoi {
+    padding: 60px 5%;
+    overflow: hidden;
+  }
+
+  .pourquoi-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .pourquoi-item {
+    padding: 16px 18px;
+  }
+
+  .tech-card {
+    padding: 24px 20px;
+  }
+
+  .tech-tags {
+    gap: 8px;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  /* ── CTA ── */
+  #cta {
+    padding: 80px 5%;
+    overflow: hidden;
+  }
+
+  #cta h2 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  #cta .cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #cta .cta-actions .btn-primary,
+  #cta .cta-actions .btn-outline {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* ── SECTION TITRES ── */
+  .section-titre {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+    letter-spacing: -0.5px;
+  }
+
+  .section-sous-titre {
+    font-size: 0.88rem;
+    max-width: 100%;
+  }
+
 }
 
-@media (max-width: 600px) {
-  #hero { padding: 100px 5% 60px; }
-  .hero-actions { flex-direction: column; }
-  .compteurs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .compteur-nombre { font-size: 2.2rem; }
+/* ── TRÈS PETITS ÉCRANS (moins de 380px) ── */
+@media (max-width: 380px) {
+
+  #hero {
+    padding: 90px 4% 50px;
+  }
+
+  .hero-titre {
+    font-size: 1.6rem;
+  }
+
+  .compteurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .compteur-nombre {
+    font-size: 1.7rem;
+  }
+
 }
