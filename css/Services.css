@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════
-   MHAN-Niger — services.css
+   MHAN-Niger — services.css (COMPLET)
 ════════════════════════════════════════ */
 
 /* ── HERO SERVICES ── */
@@ -26,11 +26,12 @@
   z-index: 1;
 }
 
-/* ── GRILLE SERVICES ── */
+/* ── SECTION SERVICES DÉTAILLÉS ── */
 #services-detail {
   padding: 80px 6%;
 }
 
+/* ── BLOCS SERVICES ── */
 .service-bloc {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,6 +53,7 @@
   direction: ltr;
 }
 
+/* ── CONTENU BLOC ── */
 .service-numero {
   font-family: 'Syne', sans-serif;
   font-size: 5rem;
@@ -73,6 +75,7 @@
   font-weight: 800;
   margin-bottom: 16px;
   letter-spacing: -0.5px;
+  color: var(--blanc);
 }
 
 .service-description {
@@ -95,19 +98,20 @@
   gap: 12px;
   font-size: 0.88rem;
   color: var(--blanc-70);
+  line-height: 1.5;
 }
 
 .service-liste-item::before {
   content: '';
   width: 6px;
   height: 6px;
+  min-width: 6px;
   background: var(--bleu-electrique);
   border-radius: 50%;
-  min-width: 6px;
   box-shadow: 0 0 6px var(--bleu-electrique);
 }
 
-/* ── CARTE VISUELLE SERVICE ── */
+/* ── CARTE VISUELLE ── */
 .service-visuel {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(14,165,233,0.12);
@@ -120,12 +124,15 @@
 .service-visuel::before {
   content: '';
   position: absolute;
-  top: -80px; right: -80px;
-  width: 250px; height: 250px;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(circle,
     rgba(14,165,233,0.1) 0%,
     transparent 70%);
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .service-visuel-icone {
@@ -251,17 +258,116 @@
   font-size: 0.75rem;
 }
 
-/* ── RESPONSIVE ── */
+/* ════════════════════════════════════════
+   RESPONSIVE MOBILE
+════════════════════════════════════════ */
+
 @media (max-width: 900px) {
+
   .service-bloc {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .service-bloc.inverse { direction: ltr; }
-  .tarifs-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+
+  .service-bloc.inverse {
+    direction: ltr;
+  }
+
+  .service-bloc.inverse > * {
+    direction: ltr;
+  }
+
+  .tarifs-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
-@media (max-width: 600px) {
-  .service-features { grid-template-columns: 1fr; }
-  .service-titre { font-size: 1.4rem; }
+@media (max-width: 768px) {
+
+  #hero-services {
+    padding: 120px 5% 60px;
+  }
+
+  #services-detail {
+    padding: 50px 5%;
+    overflow: hidden;
+  }
+
+  .service-bloc {
+    padding: 50px 0;
+    gap: 32px;
+  }
+
+  .service-numero {
+    font-size: 3.5rem;
+  }
+
+  .service-icone-grand {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+  }
+
+  .service-titre {
+    font-size: 1.4rem;
+  }
+
+  .service-description {
+    font-size: 0.88rem;
+  }
+
+  .service-liste-item {
+    font-size: 0.83rem;
+  }
+
+  .service-visuel {
+    padding: 28px 22px;
+  }
+
+  .service-visuel-icone {
+    font-size: 2.8rem;
+  }
+
+  .service-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .feature-chip {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  #tarifs {
+    padding: 60px 5%;
+  }
+
+  .tarifs-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .tarif-card {
+    padding: 32px 24px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .service-titre {
+    font-size: 1.2rem;
+  }
+
+  .service-features {
+    grid-template-columns: 1fr;
+  }
+
+  #hero-services {
+    padding: 110px 4% 50px;
+  }
+
 }
