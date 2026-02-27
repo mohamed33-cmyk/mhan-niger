@@ -399,21 +399,175 @@
   .org-h-ticks { justify-content: center; }
   .org-colonne { max-width: 100%; }
 }
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .mission-grid { grid-template-columns: 1fr; gap: 48px; }
+/* ════════════════════════════════════════
+   RESPONSIVE MOBILE — apropos
+════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── HERO ── */
+  #hero-apropos {
+    padding: 120px 5% 60px;
+    overflow: hidden;
+  }
+
+  /* ── MISSION ── */
+  #mission {
+    padding: 60px 5%;
+    overflow: hidden;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .mission-texte p {
+    font-size: 0.88rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .mission-citation {
+    font-size: 0.88rem;
+    padding: 18px 20px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 20px 0;
+  }
+
+  .mission-annee {
+    font-size: 4rem;
+  }
+
+  .valeurs-chips {
+    gap: 8px;
+  }
+
+  .valeur-chip {
+    font-size: 0.75rem;
+    padding: 7px 14px;
+  }
+
+  /* ── SECTION TITRE GLOBAL ── */
+  .section-titre {
+    font-size: clamp(1.6rem, 5vw, 2rem) !important;
+    letter-spacing: -0.5px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .section-sous-titre {
+    font-size: 0.88rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  /* ── TIMELINE ── */
+  #timeline {
+    padding: 60px 5%;
+    overflow: hidden;
+  }
+
+  .timeline-container {
+    margin-top: 40px;
+  }
+
   .timeline-item {
     justify-content: flex-start;
     padding-right: 0;
-    padding-left: 48px;
+    padding-left: 40px;
   }
-  .timeline-item.droite { padding-left: 48px; }
-  .timeline-ligne { left: 14px; }
-  .timeline-point { left: 14px; }
-  .timeline-card { max-width: 100%; }
+
+  .timeline-item.droite {
+    padding-left: 40px;
+  }
+
+  .timeline-ligne {
+    left: 10px;
+  }
+
+  .timeline-point {
+    left: 10px;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .timeline-card p {
+    font-size: 0.82rem;
+  }
+
+  /* ── ORGANIGRAMME ── */
+  #organigramme {
+    padding: 60px 5%;
+    overflow: hidden;
+  }
+
+  .org-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .org-niveau-3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-width: unset;
+  }
+
+  .org-colonne {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .org-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .org-sous-niveau {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .org-sous-col {
+    width: 100%;
+  }
+
+  .org-box.feuille,
+  .org-box.tech-sous,
+  .org-box.commerce-sous,
+  .org-box.admin-sous {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* ── CTA ── */
+  #cta-apropos {
+    padding: 70px 5%;
+    overflow: hidden;
+  }
+
 }
 
-@media (max-width: 600px) {
-  .org-card { min-width: 120px; padding: 14px 16px; }
-  .org-niveau { gap: 12px; }
+@media (max-width: 380px) {
+
+  .section-titre {
+    font-size: 1.4rem !important;
+  }
+
+  .mission-annee {
+    font-size: 3rem;
+  }
+
+  .valeur-chip {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
 }
