@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace Client — MHAN-Niger</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/client.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-badge">M</div>
+    MHAN<span>-Niger</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="client.html" class="nav-cta actif">Espace Client</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="menu-mobile" id="menuMobile">
+  <button class="btn-fermer" id="btnFermer">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="apropos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="client.html">Espace Client</a>
+</div>
+
+<!-- PAGE CLIENT (Connexion / Inscription) -->
+<section id="page-client">
+  <div class="client-bg"></div>
+
+  <div class="client-wrapper" id="clientWrapper">
+
+    <!-- INFOS GAUCHE -->
+    <div class="client-infos fade-left">
+      <div class="section-tag">Portail sécurisé</div>
+      <h1 class="section-titre">
+        Votre espace<br/>
+        <span style="color:var(--bleu-electrique)">MHAN-Niger</span>
+      </h1>
+      <p>
+        Accédez à votre tableau de bord personnel pour suivre
+        vos projets, consulter vos factures et contacter
+        notre équipe de support.
+      </p>
+      <div class="client-features">
+        <div class="client-feature">
+          <div class="feature-icone">📊</div>
+          <div>
+            <h4>Suivi de projets</h4>
+            <p>Visualisez l'avancement de vos projets en temps réel.</p>
+          </div>
+        </div>
+        <div class="client-feature">
+          <div class="feature-icone">🎫</div>
+          <div>
+            <h4>Support dédié</h4>
+            <p>Soumettez et suivez vos tickets d'assistance.</p>
+          </div>
+        </div>
+        <div class="client-feature">
+          <div class="feature-icone">📄</div>
+          <div>
+            <h4>Documents & Factures</h4>
+            <p>Accédez à tous vos documents contractuels.</p>
+          </div>
+        </div>
+        <div class="client-feature">
+          <div class="feature-icone">🔒</div>
+          <div>
+            <h4>Accès 100% sécurisé</h4>
+            <p>Vos données protégées par chiffrement avancé.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOÎTE AUTH -->
+    <div class="auth-boite fade-right">
+
+      <!-- ONGLETS -->
+      <div class="auth-onglets">
+        <button class="auth-onglet actif"
+          onclick="basculerOnglet('connexion')">
+          Se connecter
+        </button>
+        <button class="auth-onglet"
+          onclick="basculerOnglet('inscription')">
+          S'inscrire
+        </button>
+      </div>
+
+      <!-- FORMULAIRE CONNEXION -->
+      <form class="auth-form actif"
+        id="formConnexion"
+        onsubmit="seConnecter(event)">
+        <div class="form-groupe">
+          <label>Adresse email</label>
+          <input type="email"
+            id="connexionEmail"
+            placeholder="votre@email.com"
+            required />
+        </div>
+        <div class="form-groupe">
+          <label>Mot de passe</label>
+          <input type="password"
+            id="connexionMotDePasse"
+            placeholder="••••••••"
+            required />
+        </div>
+        <button type="submit" class="auth-submit">
+          Se connecter →
+        </button>
+        <p class="auth-note">
+          Mot de passe oublié ?
+          <a href="contact.html">Contactez-nous</a>
+        </p>
+      </form>
+
+      <!-- FORMULAIRE INSCRIPTION -->
+      <form class="auth-form"
+        id="formInscription"
+        onsubmit="sInscrire(event)">
+        <div class="form-groupe">
+          <label>Nom complet</label>
+          <input type="text"
+            id="inscriptionNom"
+            placeholder="Votre nom complet"
+            required />
+        </div>
+        <div class="form-groupe">
+          <label>Entreprise / Organisation</label>
+          <input type="text"
+            id="inscriptionEntreprise"
+            placeholder="Nom de votre organisation" />
+        </div>
+        <div class="form-groupe">
+          <label>Adresse email</label>
+          <input type="email"
+            id="inscriptionEmail"
+            placeholder="votre@email.com"
+            required />
+        </div>
+        <div class="form-groupe">
+          <label>Service souhaité</label>
+          <select id="inscriptionService">
+            <option value="" disabled selected>Choisissez un service</option>
+            <option>Ingénierie Digitale</option>
+            <option>Services Informatiques & Réseaux</option>
+            <option>Communication Digitale</option>
+            <option>Cybersécurité & Maintenance</option>
+            <option>Autre demande</option> 
+          </select>
+        </div>
+        <div class="form-groupe">
+          <label>Mot de passe</label>
+          <input type="password"
+            id="inscriptionMotDePasse"
+            placeholder="Créez un mot de passe"
+            required />
+        </div>
+        <button type="submit" class="auth-submit">
+          Créer mon compte →
+        </button>
+        <p class="auth-note">
+          En vous inscrivant vous acceptez nos
+          <a href="#">conditions d'utilisation</a>
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD (affiché après connexion) -->
+<section id="dashboard">
+
+  <!-- HEADER DASHBOARD -->
+  <div class="dash-header">
+    <div class="dash-user">
+      <div class="dash-avatar" id="dashAvatar">U</div>
+      <div>
+        <div class="dash-nom" id="dashNom">Utilisateur</div>
+        <div class="dash-role">Client MHAN-Niger</div>
+      </div>
+    </div>
+    <button class="dash-deconnexion"
+      onclick="seDeconnecter()">
+      ← Déconnexion
+    </button>
+  </div>
+
+  <!-- STATISTIQUES -->
+  <div class="dash-stats">
+    <div class="dash-stat">
+      <div class="dash-stat-label">Projets actifs</div>
+      <div class="dash-stat-valeur">
+        2<span>+</span>
+      </div>
+      <div class="dash-stat-sub">En cours</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-stat-label">Tickets ouverts</div>
+      <div class="dash-stat-valeur">1</div>
+      <div class="dash-stat-sub">En attente</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-stat-label">Factures</div>
+      <div class="dash-stat-valeur">3</div>
+      <div class="dash-stat-sub">Documents</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-stat-label">Support</div>
+      <div class="dash-stat-valeur">
+        24<span>/7</span>
+      </div>
+      <div class="dash-stat-sub">Disponible</div>
+    </div>
+  </div>
+
+  <!-- CONTENU DASHBOARD -->
+  <div class="dash-grid">
+
+    <!-- PROJETS -->
+    <div class="dash-section">
+      <h3>📋 Mes Projets</h3>
+      <div class="projet-item">
+        <div>
+          <div class="projet-nom">Site Web Entreprise</div>
+          <div class="projet-service">Développement Digital</div>
+        </div>
+        <span class="projet-statut statut-cours">En cours</span>
+      </div>
+      <div class="projet-item">
+        <div>
+          <div class="projet-nom">Installation Réseau</div>
+          <div class="projet-service">Réseaux & Informatique</div>
+        </div>
+        <span class="projet-statut statut-attente">En attente</span>
+      </div>
+      <div class="projet-item">
+        <div>
+          <div class="projet-nom">Kit Starlink</div>
+          <div class="projet-service">Services Starlink</div>
+        </div>
+        <span class="projet-statut statut-termine">Terminé</span>
+      </div>
+    </div>
+
+    <!-- ACTIVITÉS -->
+    <div class="dash-section">
+      <h3>🔔 Activités récentes</h3>
+      <div class="activite-item">
+        <div class="activite-point"></div>
+        <div>
+          <div class="activite-texte">
+            Mise à jour du projet Site Web
+          </div>
+          <div class="activite-date">Il y a 2 heures</div>
+        </div>
+      </div>
+      <div class="activite-item">
+        <div class="activite-point"></div>
+        <div>
+          <div class="activite-texte">
+            Nouvelle facture disponible
+          </div>
+          <div class="activite-date">Il y a 1 jour</div>
+        </div>
+      </div>
+      <div class="activite-item">
+        <div class="activite-point"></div>
+        <div>
+          <div class="activite-texte">
+            Ticket #001 résolu
+          </div>
+          <div class="activite-date">Il y a 3 jours</div>
+        </div>
+      </div>
+      <div class="activite-item">
+        <div class="activite-point"></div>
+        <div>
+          <div class="activite-texte">
+            Installation Starlink terminée
+          </div>
+          <div class="activite-date">Il y a 1 semaine</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">M</div>
+        MHAN<span>-Niger</span>
+      </a>
+      <p>Acteur engagé de la transformation numérique au Niger.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Développement Digital</a></li>
+        <li><a href="services.html">Réseaux & Informatique</a></li>
+        <li><a href="services.html">Communication Digitale</a></li>
+        <li><a href="services.html">Services Starlink</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Entreprise</h4>
+      <ul>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="client.html">Espace Client</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Niamey, Niger</a></li>
+        <li><a href="#">contact@mhan-niger.com</a></li>
+        <li><a href="#">Support 24/7</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>MHAN-Niger</span>. Tous droits réservés.</p>
+    <p>Conçu avec <span>♥</span> au Niger 🇳🇪</p>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script src="js/api.js"></script>
+<script>
+
+// ── BASCULER ONGLETS ──
+function basculerOnglet(onglet) {
+  document.querySelectorAll('.auth-onglet').forEach(function(t, i) {
+    t.classList.toggle('actif',
+      (onglet === 'connexion' && i === 0) ||
+      (onglet === 'inscription' && i === 1)
+    );
+  });
+  document.getElementById('formConnexion')
+    .classList.toggle('actif', onglet === 'connexion');
+  document.getElementById('formInscription')
+    .classList.toggle('actif', onglet === 'inscription');
+}
+
+// ── CONNEXION ──
+async function seConnecter(event) {
+  event.preventDefault();
+  const email = document.getElementById('connexionEmail').value;
+  const motDePasse = document.getElementById('connexionMotDePasse').value;
+  const btn = event.target.querySelector('.auth-submit');
+  btn.textContent = 'Connexion...';
+  btn.disabled = true;
+
+  const succes = await connecter(email, motDePasse);
+
+  if (!succes) {
+    btn.textContent = 'Se connecter →';
+    btn.disabled = false;
+  }
+}
+
+// ── INSCRIPTION ──
+async function sInscrire(event) {
+  event.preventDefault();
+  const nom = document.getElementById('inscriptionNom').value;
+  const email = document.getElementById('inscriptionEmail').value;
+  const motDePasse = document.getElementById('inscriptionMotDePasse').value;
+  const entreprise = document.getElementById('inscriptionEntreprise').value;
+  const service = document.getElementById('inscriptionService').value;
+  const btn = event.target.querySelector('.auth-submit');
+  btn.textContent = 'Création...';
+  btn.disabled = true;
+
+  const succes = await inscrire(nom, email, motDePasse, entreprise, service);
+
+  if (succes) {
+    basculerOnglet('connexion');
+    event.target.reset();
+  }
+
+  btn.textContent = 'Créer mon compte →';
+  btn.disabled = false;
+}
+
+// ── AFFICHER DASHBOARD ──
+function afficherDashboard(utilisateur) {
+  document.getElementById('page-client').style.display = 'none';
+  const dash = document.getElementById('dashboard');
+  dash.classList.add('actif');
+  document.getElementById('dashNom').textContent = utilisateur.nom;
+  document.getElementById('dashAvatar').textContent =
+    utilisateur.nom.charAt(0).toUpperCase();
+}
+
+// ── DÉCONNEXION ──
+function seDeconnecter() {
+  deconnecter();
+  document.getElementById('dashboard').classList.remove('actif');
+  document.getElementById('page-client').style.display = 'flex';
+}
+
+// ── VÉRIFIER SI DÉJÀ CONNECTÉ ──
+window.addEventListener('load', function() {
+  if (estConnecte()) {
+    const user = JSON.parse(localStorage.getItem('mhan_user'));
+    if (user) afficherDashboard(user);
+  }
+});
+
+</script>
+</body>
+</html>

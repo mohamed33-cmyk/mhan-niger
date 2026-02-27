@@ -1,182 +1,281 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MHAN-Niger | Solutions Digitales & Technologies</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MHAN-Niger | Solutions Digitales</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-
-    <!-- BARRE DE NAVIGATION -->
-    <!-- BARRE DE NAVIGATION -->
-<nav>
-  <div class="logo">MHAN-Niger</div>
-  <ul id="menuPrincipal">
-    <li><a href="#accueil">Accueil</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#apropos">À propos</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#client">Espace Client</a></li>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-badge">M</div>
+    MHAN<span>-Niger</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="actif">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="client.html" class="nav-cta">Espace Client</a></li>
   </ul>
-  <!-- Bouton hamburger (visible uniquement sur mobile) -->
-  <button id="btnHamburger">☰</button>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-    <!-- SECTION HERO / ACCUEIL -->
-    <section id="accueil">
-      <h1>La transformation numérique<br/>du Niger commence ici.</h1>
-      <p>MHAN-Niger, votre partenaire technologique de confiance à Niamey.</p>
-      <a href="#services">Découvrir nos services</a>
-    </section>
+<!-- MENU MOBILE -->
+<div class="menu-mobile" id="menuMobile">
+  <button class="btn-fermer" id="btnFermer">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="apropos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="client.html">Espace Client</a>
+</div>
 
-    <!-- SECTION SERVICES -->
-    <section id="services">
-      <h2>Nos Services</h2>
-      <div class="services-grid">
+<!-- CANVAS PARTICULES -->
+<canvas id="canvas-particules"></canvas>
 
-        <div class="service-card">
-          <h3>💻 Développement Digital</h3>
-          <p>Applications web, mobiles et solutions sur mesure.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>🔧 Réseaux & Informatique</h3>
-          <p>Installation, sécurisation et maintenance des infrastructures IT.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>🎨 Communication Digitale</h3>
-          <p>Création graphique, branding et identité visuelle.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>🛰️ Services Starlink</h3>
-          <p>Vente, installation et support des équipements Starlink.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION À PROPOS -->
-    <section id="apropos">
-      <h2>À propos de MHAN-Niger</h2>
-      <p>
-        Fondée en septembre 2025, MHAN-Niger est une entreprise technologique 
-        nigérienne spécialisée dans le développement de solutions digitales, 
-        l'intégration FinTech, la création de plateformes Web & Mobile, 
-        l'hébergement sécurisé et les réseaux informatiques.
-      </p>
-    </section>
-
-    <!-- SECTION ESPACE CLIENT -->
-    <!-- SECTION ESPACE CLIENT -->
-<section id="client">
-    <h2>Espace Client</h2>
-
-    <!-- FORMULAIRES CONNEXION / INSCRIPTION -->
-    <div id="authBox">
-
-        <!-- ONGLETS -->
-        <div class="auth-onglets">
-            <button class="onglet actif" 
-                onclick="basculerOnglet('connexion')">
-                Se connecter
-            </button>
-            <button class="onglet" 
-                onclick="basculerOnglet('inscription')">
-                S'inscrire
-            </button>
-        </div>
-
-        <!-- FORMULAIRE CONNEXION -->
-        <form id="formConnexion">
-            <input type="email" 
-                id="connexionEmail" 
-                placeholder="Votre email" 
-                required />
-            <input type="password" 
-                id="connexionMotDePasse" 
-                placeholder="Votre mot de passe" 
-                required />
-            <button type="submit">Se connecter</button>
-        </form>
-
-        <!-- FORMULAIRE INSCRIPTION -->
-        <form id="formInscription" style="display:none;">
-            <input type="text" 
-                id="inscriptionNom" 
-                placeholder="Votre nom complet" 
-                required />
-            <input type="text" 
-                id="inscriptionEntreprise" 
-                placeholder="Votre entreprise" />
-            <input type="email" 
-                id="inscriptionEmail" 
-                placeholder="Votre email" 
-                required />
-            <select id="inscriptionService">
-                <option value="" disabled selected>
-                    Choisissez un service
-                </option>
-                <option>Développement Digital</option>
-                <option>Réseaux & Informatique</option>
-                <option>Communication Digitale</option>
-                <option>Services Starlink</option>
-            </select>
-            <input type="password" 
-                id="inscriptionMotDePasse" 
-                placeholder="Créez un mot de passe" 
-                required />
-            <button type="submit">Créer mon compte</button>
-        </form>
-
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="badge-point"></div>
+      Fondée en 2025 — Niamey, Niger
     </div>
-
-    <!-- DASHBOARD (affiché après connexion) -->
-    <div id="dashboard" style="display:none;">
-        <div class="dash-header">
-            <div class="dash-avatar" id="dashAvatar">U</div>
-            <div>
-                <div id="dashNom">Utilisateur</div>
-                <div id="dashEmail">email@exemple.com</div>
-                <div id="dashRole">Client</div>
-            </div>
-        </div>
-        <div class="dash-stats">
-            <div class="dash-stat">
-                <div id="dashNbProjets">0</div>
-                <div>Projets actifs</div>
-            </div>
-            <div class="dash-stat">
-                <div>24/7</div>
-                <div>Support</div>
-            </div>
-        </div>
-        <button onclick="deconnecter()">Se déconnecter</button>
+    <h1 class="hero-titre">
+      La <span class="gradient-texte">révolution</span><br/>
+      numérique du Niger
+    </h1>
+    <div class="hero-typing">
+      <span id="texte-typing"></span>
+      <span class="curseur-typing"></span>
     </div>
-
+    <p class="hero-sous-titre">
+      MHAN-Niger propulse votre organisation vers l'excellence digitale.
+      Développement, FinTech, Réseaux, Starlink — des solutions innovantes
+      taillées pour l'Afrique.
+    </p>
+    <div class="hero-actions">
+      <a href="services.html" class="btn-primary">
+        Découvrir nos services →
+      </a>
+      <a href="contact.html" class="btn-outline">
+        Nous contacter
+      </a>
+    </div>
+  </div>
 </section>
 
-    <!-- SECTION CONTACT -->
-    <section id="contact">
-      <h2>Contactez-nous</h2>
-      <form>
-        <input type="text" placeholder="Votre nom" />
-        <input type="email" placeholder="Votre email" />
-        <textarea placeholder="Votre message"></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
+<!-- COMPTEURS -->
+<section id="compteurs">
+  <div class="compteurs-grid">
+    <div class="compteur-item fade-up">
+      <div class="compteur-nombre">
+        <span class="compter" data-cible="4">0</span><span>+</span>
+      </div>
+      <div class="compteur-ligne"></div>
+      <div class="compteur-label">Pôles de services</div>
+    </div>
+    <div class="compteur-item fade-up" style="transition-delay:0.1s">
+      <div class="compteur-nombre">
+        <span class="compter" data-cible="100">0</span><span>%</span>
+      </div>
+      <div class="compteur-ligne"></div>
+      <div class="compteur-label">Solutions sur mesure</div>
+    </div>
+    <div class="compteur-item fade-up" style="transition-delay:0.2s">
+      <div class="compteur-nombre">
+        <span class="compter" data-cible="24">0</span><span>/7</span>
+      </div>
+      <div class="compteur-ligne"></div>
+      <div class="compteur-label">Support technique</div>
+    </div>
+    <div class="compteur-item fade-up" style="transition-delay:0.3s">
+      <div class="compteur-nombre">
+        <span class="compter" data-cible="50">0</span><span>+</span>
+      </div>
+      <div class="compteur-ligne"></div>
+      <div class="compteur-label">Clients satisfaits</div>
+    </div>
+  </div>
+</section>
 
-    <!-- PIED DE PAGE -->
-    <footer>
-      <p>© 2025 MHAN-Niger. Tous droits réservés. — Niamey, Niger</p>
-    </footer>
-<script src="api.js"></script>
-<script src="script.js"></script>
-  </body>
+<!-- SERVICES APERÇU -->
+<section id="services-apercu">
+  <div class="section-tag">Nos expertises</div>
+  <h2 class="section-titre fade-up">
+    4 pôles pour votre<br/>transformation digitale
+  </h2>
+  <div class="services-apercu-grid">
+  <a href="services.html" class="service-apercu-card fade-up">
+    <span class="card-numero">01</span>
+    <span class="card-icone">💻</span>
+    <h3>Ingénierie Digitale</h3>
+    <p>Applications web, mobiles Android & iOS, automatisation des processus et intégration d'API.</p>
+    <div class="card-lien">Découvrir →</div>
+  </a>
+  <a href="services.html" class="service-apercu-card fade-up"
+    style="transition-delay:0.1s">
+    <span class="card-numero">02</span>
+    <span class="card-icone">🔧</span>
+    <h3>Services Informatiques & Réseaux</h3>
+    <p>Installation, maintenance et optimisation des infrastructures IT. Dépannage et assistance technique.</p>
+    <div class="card-lien">Découvrir →</div>
+  </a>
+  <a href="services.html" class="service-apercu-card fade-up"
+    style="transition-delay:0.2s">
+    <span class="card-numero">03</span>
+    <span class="card-icone">🎨</span>
+    <h3>Communication Digitale</h3>
+    <p>Création graphique, branding, identité visuelle et contenus professionnels numériques.</p>
+    <div class="card-lien">Découvrir →</div>
+  </a>
+  <a href="services.html" class="service-apercu-card fade-up"
+    style="transition-delay:0.3s">
+    <span class="card-numero">04</span>
+    <span class="card-icone">🔐</span>
+    <h3>Cybersécurité & Maintenance</h3>
+    <p>Pentest, audit ISO 27001, monitoring, maintenance et conseil stratégique en cybersécurité.</p>
+    <div class="card-lien">Découvrir →</div>
+  </a>
+</div>
+</section>
 
+<!-- POURQUOI NOUS -->
+<section id="pourquoi">
+  <div class="pourquoi-grid">
+    <div>
+      <div class="section-tag">Pourquoi nous choisir</div>
+      <h2 class="section-titre fade-left">
+        Votre succès<br/>est notre mission
+      </h2>
+      <div class="pourquoi-liste">
+        <div class="pourquoi-item fade-left" style="transition-delay:0.1s">
+          <div class="pourquoi-icone">🏆</div>
+          <div>
+            <h4>Qualité & Excellence</h4>
+            <p>Chaque projet respecte des standards élevés, testé et validé pour une robustesse dans le temps.</p>
+          </div>
+        </div>
+        <div class="pourquoi-item fade-left" style="transition-delay:0.2s">
+          <div class="pourquoi-icone">⚡</div>
+          <div>
+            <h4>Rapidité & Efficacité</h4>
+            <p>Nous planifions rigoureusement pour respecter vos délais sans compromis sur la qualité.</p>
+          </div>
+        </div>
+        <div class="pourquoi-item fade-left" style="transition-delay:0.3s">
+          <div class="pourquoi-icone">🔒</div>
+          <div>
+            <h4>Sécurité Maximale</h4>
+            <p>Protocoles avancés pour protéger vos données et garantir la confidentialité de vos systèmes.</p>
+          </div>
+        </div>
+        <div class="pourquoi-item fade-left" style="transition-delay:0.4s">
+          <div class="pourquoi-icone">🤝</div>
+          <div>
+            <h4>Support 24/7</h4>
+            <p>Une équipe réactive disponible à tout moment pour résoudre vos problèmes rapidement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pourquoi-visuel fade-right">
+      <div class="tech-card">
+        <h3>⚙️ Nos Technologies</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">ASP.NET Core</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">SQL Server</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Android</span>
+          <span class="tech-tag">iOS</span>
+          <span class="tech-tag">Starlink</span>
+          <span class="tech-tag">CCTV</span>
+          <span class="tech-tag">FinTech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="section-tag">Passons à l'action</div>
+  <h2 class="fade-up">
+    Prêt à digitaliser<br/>
+    votre organisation ?
+  </h2>
+  <p class="fade-up">
+    Contactez notre équipe dès aujourd'hui et obtenez
+    une consultation gratuite pour votre projet.
+  </p>
+  <div class="cta-actions fade-up">
+    <a href="contact.html" class="btn-primary">
+      Démarrer un projet →
+    </a>
+    <a href="client.html" class="btn-outline">
+      Espace Client
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">M</div>
+        MHAN<span>-Niger</span>
+      </a>
+      <p>Acteur engagé de la transformation numérique au Niger. Des solutions innovantes, sécurisées et évolutives.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Développement Digital</a></li>
+        <li><a href="services.html">Réseaux & Informatique</a></li>
+        <li><a href="services.html">Communication Digitale</a></li>
+        <li><a href="services.html">Services Starlink</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Entreprise</h4>
+      <ul>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="apropos.html">Notre équipe</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="client.html">Espace Client</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Niamey, Niger</a></li>
+        <li><a href="#">contact@mhan-niger.com</a></li>
+        <li><a href="#">Lun–Sam : 08h–18h</a></li>
+        <li><a href="#">Support 24/7</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>MHAN-Niger</span>. Tous droits réservés.</p>
+    <p>Conçu avec <span>♥</span> au Niger 🇳🇪</p>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script src="js/index.js"></script>
+</body>
 </html>

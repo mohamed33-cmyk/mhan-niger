@@ -1,0 +1,313 @@
+/* ════════════════════════════════════════
+   MHAN-Niger — contact.css
+════════════════════════════════════════ */
+
+/* ── HERO CONTACT ── */
+#hero-contact {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 6% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-contact-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 50% 50%,
+      rgba(14,165,233,0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #000000, #030712);
+}
+
+/* ── SECTION CONTACT ── */
+#contact-section {
+  padding: 80px 6%;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── INFOS CONTACT ── */
+.contact-infos p {
+  font-size: 0.95rem;
+  color: var(--blanc-40);
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.contact-item:hover {
+  border-color: rgba(14,165,233,0.25);
+  background: rgba(14,165,233,0.04);
+}
+
+.contact-icone {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  background: rgba(14,165,233,0.1);
+  border: 1px solid rgba(14,165,233,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.contact-item-label {
+  font-size: 0.75rem;
+  color: var(--blanc-40);
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.contact-item-valeur {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--blanc);
+}
+
+/* Horaires */
+.horaires {
+  background: rgba(14,165,233,0.04);
+  border: 1px solid rgba(14,165,233,0.12);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.horaires h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--bleu-vif);
+  margin-bottom: 14px;
+}
+
+.horaire-ligne {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--blanc-70);
+}
+
+.horaire-ligne:last-child {
+  border-bottom: none;
+}
+
+.horaire-ligne span:last-child {
+  color: var(--bleu-vif);
+  font-weight: 500;
+}
+
+/* ── FORMULAIRE ── */
+.contact-formulaire {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 24px;
+  padding: 48px 44px;
+}
+
+.contact-formulaire h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.contact-formulaire > p {
+  font-size: 0.88rem;
+  color: var(--blanc-40);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-groupe label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--blanc-40);
+  letter-spacing: 0.3px;
+}
+
+.form-groupe input,
+.form-groupe select,
+.form-groupe textarea {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--blanc);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.25s, background 0.25s;
+  width: 100%;
+}
+
+.form-groupe input:focus,
+.form-groupe select:focus,
+.form-groupe textarea:focus {
+  border-color: var(--bleu-electrique);
+  background: rgba(14,165,233,0.06);
+}
+
+.form-groupe input::placeholder,
+.form-groupe textarea::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+.form-groupe select option {
+  background: #0a0f1e;
+  color: var(--blanc);
+}
+
+.form-groupe textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 15px;
+  background: var(--gradient-bleu);
+  border: none;
+  border-radius: 10px;
+  color: var(--blanc);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--glow);
+  transition: box-shadow 0.3s, transform 0.2s;
+  letter-spacing: 0.3px;
+  margin-top: 8px;
+}
+
+.form-submit:hover {
+  box-shadow: var(--glow-fort);
+  transform: translateY(-2px);
+}
+
+/* ── FAQ ── */
+#faq {
+  padding: 100px 6%;
+  background: rgba(14,165,233,0.02);
+  border-top: 1px solid rgba(14,165,233,0.06);
+}
+
+.faq-liste {
+  max-width: 720px;
+  margin: 60px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.faq-item.ouvert {
+  border-color: rgba(14,165,233,0.3);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--blanc);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  gap: 16px;
+}
+
+.faq-icone {
+  font-size: 1.2rem;
+  color: var(--bleu-electrique);
+  transition: transform 0.3s;
+  min-width: 20px;
+}
+
+.faq-item.ouvert .faq-icone {
+  transform: rotate(45deg);
+}
+
+.faq-reponse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  padding: 0 24px;
+}
+
+.faq-item.ouvert .faq-reponse {
+  max-height: 200px;
+  padding: 0 24px 20px;
+}
+
+.faq-reponse p {
+  font-size: 0.88rem;
+  color: var(--blanc-40);
+  line-height: 1.8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-formulaire { padding: 32px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — MHAN-Niger</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-badge">M</div>
+    MHAN<span>-Niger</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="apropos.html">À propos</a></li>
+    <li><a href="contact.html" class="actif">Contact</a></li>
+    <li><a href="client.html" class="nav-cta">Espace Client</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="menu-mobile" id="menuMobile">
+  <button class="btn-fermer" id="btnFermer">✕</button>
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="apropos.html">À propos</a>
+  <a href="contact.html">Contact</a>
+  <a href="client.html">Espace Client</a>
+</div>
+
+<!-- HERO -->
+<section id="hero-contact">
+  <div class="hero-contact-bg"></div>
+  <div style="position:relative;z-index:1;text-align:center;width:100%">
+    <div class="section-tag">Parlons de votre projet</div>
+    <h1 class="section-titre fade-up">
+      Contactez<br/>
+      <span style="color:var(--bleu-electrique)">l'équipe MHAN</span>
+    </h1>
+    <p class="section-sous-titre fade-up" style="margin:0 auto">
+      Une question ? Un projet ? Notre équipe est disponible
+      pour vous accompagner vers votre transformation digitale.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- INFOS -->
+    <div class="contact-infos fade-left">
+      <div class="section-tag">Nos coordonnées</div>
+      <h2 class="section-titre">On est là<br/>pour vous</h2>
+      <p>
+        Que vous ayez un projet de développement, un besoin en
+        infrastructure réseau, ou simplement une question sur nos
+        services — notre équipe vous répond rapidement.
+      </p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icone">📍</div>
+          <div>
+            <div class="contact-item-label">Adresse</div>
+            <div class="contact-item-valeur">Niamey, République du Niger</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icone">📧</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-valeur">contact@mhan-niger.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icone">📱</div>
+          <div>
+            <div class="contact-item-label">Téléphone</div>
+            <div class="contact-item-valeur">+227 91 15 15 09</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icone">🛰️</div>
+          <div>
+            <div class="contact-item-label">Connectivité</div>
+            <div class="contact-item-valeur">Service Starlink 24/7</div>
+          </div>
+        </div>
+      </div>
+      <div class="horaires">
+        <h4>🕐 Nos horaires</h4>
+        <div class="horaire-ligne">
+          <span>Lundi — Vendredi</span>
+          <span>08h00 — 18h00</span>
+        </div>
+        <div class="horaire-ligne">
+          <span>Samedi</span>
+          <span>09h00 — 14h00</span>
+        </div>
+        <div class="horaire-ligne">
+          <span>Support technique</span>
+          <span>24h/24 — 7j/7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="contact-formulaire fade-right">
+      <h3>Envoyer un message</h3>
+      <p>Remplissez le formulaire et nous vous répondrons sous 24h.</p>
+      <form id="formContact" onsubmit="envoyerContact(event)">
+        <div class="form-row">
+          <div class="form-groupe">
+            <label>Nom complet *</label>
+            <input type="text"
+              id="contactNom"
+              placeholder="Votre nom"
+              required />
+          </div>
+          <div class="form-groupe">
+            <label>Email *</label>
+            <input type="email"
+              id="contactEmail"
+              placeholder="votre@email.com"
+              required />
+          </div>
+        </div>
+        <div class="form-groupe">
+          <label>Téléphone</label>
+          <input type="tel"
+            id="contactTel"
+            placeholder="+227 XX XX XX XX" />
+        </div>
+        <div class="form-groupe">
+          <label>Service concerné *</label>
+          <select id="contactService" required>
+            <option value="" disabled selected>Choisissez un service</option>
+            <option>Ingénierie Digitale</option>
+            <option>Services Informatiques & Réseaux</option>
+            <option>Communication Digitale</option>
+            <option>Cybersécurité & Maintenance</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="form-groupe">
+          <label>Votre message *</label>
+          <textarea
+            id="contactMessage"
+            placeholder="Décrivez votre projet ou votre demande..."
+            required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Envoyer le message ✉️
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-tag">Questions fréquentes</div>
+  <h2 class="section-titre fade-up" style="text-align:center">
+    Vous avez des questions ?
+  </h2>
+  <div class="faq-liste">
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment se déroule un projet avec MHAN-Niger ?
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Nous commençons par une consultation gratuite pour comprendre vos besoins. Ensuite nous établissons un devis détaillé, planifions le projet et vous tenons informé à chaque étape jusqu'à la livraison finale.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Quel est le délai moyen pour développer une application ?
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Cela dépend de la complexité du projet. Un site vitrine prend 1 à 2 semaines, une application mobile 4 à 8 semaines, et un système complexe peut prendre 3 à 6 mois. Nous vous donnons un planning précis dès le début.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Proposez-vous un support après la livraison ?
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Oui ! Tous nos projets incluent une période de support après livraison. Nous proposons également des contrats de maintenance pour assurer le bon fonctionnement de vos solutions sur le long terme.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Comment fonctionne le service Starlink ?
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Nous vendons les kits Starlink officiels, les installons et les configurons pour vous. Nous gérons également les réabonnements et assurons un support technique en cas de problème. Disponible dans tout le Niger.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Travaillez-vous avec les ONG et institutions publiques ?
+        <span class="faq-icone">+</span>
+      </button>
+      <div class="faq-reponse">
+        <p>Absolument ! MHAN-Niger accompagne les entreprises privées, les ONG, les institutions publiques et les particuliers. Nous adaptons nos solutions et nos tarifs selon le type d'organisation.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">M</div>
+        MHAN<span>-Niger</span>
+      </a>
+      <p>Acteur engagé de la transformation numérique au Niger.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Développement Digital</a></li>
+        <li><a href="services.html">Réseaux & Informatique</a></li>
+        <li><a href="services.html">Communication Digitale</a></li>
+        <li><a href="services.html">Services Starlink</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Entreprise</h4>
+      <ul>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="client.html">Espace Client</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Niamey, Niger</a></li>
+        <li><a href="#">contact@mhan-niger.com</a></li>
+        <li><a href="#">Support 24/7</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>MHAN-Niger</span>. Tous droits réservés.</p>
+    <p>Conçu avec <span>♥</span> au Niger 🇳🇪</p>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script src="js/api.js"></script>
+<script>
+async function envoyerContact(event) {
+  event.preventDefault();
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Envoi en cours...';
+  btn.disabled = true;
+
+  const nom = document.getElementById('contactNom').value;
+  const email = document.getElementById('contactEmail').value;
+  const service = document.getElementById('contactService').value;
+  const contenu = document.getElementById('contactMessage').value;
+
+  // Envoi réel au backend
+  const succes = await envoyerMessage(nom, email, service, contenu);
+
+  if (succes) {
+    document.getElementById('formContact').reset();
+  }
+
+  btn.textContent = 'Envoyer le message ✉️';
+  btn.disabled = false;
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const estOuvert = item.classList.contains('ouvert');
+
+  // Fermer tous
+  document.querySelectorAll('.faq-item').forEach(function(i) {
+    i.classList.remove('ouvert');
+  });
+
+  // Ouvrir celui cliqué si pas déjà ouvert
+  if (!estOuvert) {
+    item.classList.add('ouvert');
+  }
+}
+</script>
+</body>
+</html>

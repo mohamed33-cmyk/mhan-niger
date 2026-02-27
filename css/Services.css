@@ -1,0 +1,267 @@
+/* ════════════════════════════════════════
+   MHAN-Niger — services.css
+════════════════════════════════════════ */
+
+/* ── HERO SERVICES ── */
+#hero-services {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 6% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-services-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%,
+      rgba(14,165,233,0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #000000, #030712);
+}
+
+.hero-services-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── GRILLE SERVICES ── */
+#services-detail {
+  padding: 80px 6%;
+}
+
+.service-bloc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.service-bloc:last-child {
+  border-bottom: none;
+}
+
+.service-bloc.inverse {
+  direction: rtl;
+}
+
+.service-bloc.inverse > * {
+  direction: ltr;
+}
+
+.service-numero {
+  font-family: 'Syne', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(14,165,233,0.08);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.service-icone-grand {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-titre {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--blanc-40);
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.service-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.service-liste-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--blanc-70);
+}
+
+.service-liste-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--bleu-electrique);
+  border-radius: 50%;
+  min-width: 6px;
+  box-shadow: 0 0 6px var(--bleu-electrique);
+}
+
+/* ── CARTE VISUELLE SERVICE ── */
+.service-visuel {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(14,165,233,0.12);
+  border-radius: 24px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-visuel::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 250px; height: 250px;
+  background: radial-gradient(circle,
+    rgba(14,165,233,0.1) 0%,
+    transparent 70%);
+  border-radius: 50%;
+}
+
+.service-visuel-icone {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
+}
+
+.service-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.feature-chip {
+  background: rgba(14,165,233,0.06);
+  border: 1px solid rgba(14,165,233,0.15);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bleu-vif);
+  text-align: center;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.feature-chip:hover {
+  background: rgba(14,165,233,0.12);
+  box-shadow: var(--glow);
+}
+
+/* ── SECTION TARIFS ── */
+#tarifs {
+  padding: 100px 6%;
+  background: rgba(14,165,233,0.02);
+  border-top: 1px solid rgba(14,165,233,0.06);
+}
+
+.tarifs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.tarif-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  padding: 40px 32px;
+  position: relative;
+  transition: transform 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.tarif-card.populaire {
+  border-color: var(--bleu-electrique);
+  background: rgba(14,165,233,0.05);
+  box-shadow: var(--glow);
+}
+
+.tarif-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-bleu);
+  color: var(--blanc);
+  padding: 4px 18px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: var(--glow);
+}
+
+.tarif-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(14,165,233,0.3);
+}
+
+.tarif-icone {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.tarif-nom {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.tarif-prix {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  color: var(--bleu-vif);
+  margin-bottom: 24px;
+}
+
+.tarif-liste {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.tarif-liste li {
+  font-size: 0.83rem;
+  color: var(--blanc-70);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tarif-liste li::before {
+  content: '✓';
+  color: var(--bleu-electrique);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .service-bloc {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .service-bloc.inverse { direction: ltr; }
+  .tarifs-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 600px) {
+  .service-features { grid-template-columns: 1fr; }
+  .service-titre { font-size: 1.4rem; }
+}
