@@ -630,3 +630,55 @@
   }
 
 }
+
+/* ── MODE CLAIR — ACCUEIL ── */
+[data-theme="light"] #hero {
+  background: linear-gradient(180deg, #f8f6f0, #f0ece0);
+}
+
+[data-theme="light"] .hero-titre {
+  color: var(--texte-principal);
+}
+
+[data-theme="light"] .hero-typing {
+  color: var(--texte-secondaire);
+}
+
+[data-theme="light"] .hero-sous-titre {
+  color: var(--texte-discret);
+}
+
+[data-theme="light"] .hero-badge {
+  background: rgba(184,134,11,0.1);
+  border-color: rgba(184,134,11,0.3);
+  color: var(--bleu-electrique);
+}
+
+[data-theme="light"] #compteurs {
+  background: rgba(184,134,11,0.04);
+  border-color: rgba(184,134,11,0.1);
+}
+
+[data-theme="light"] .compteur-nombre {
+  color: var(--texte-principal);
+}
+
+[data-theme="light"] .compteur-label {
+  color: var(--texte-discret);
+}
+
+[data-theme="light"] #services-apercu,
+[data-theme="light"] #pourquoi,
+[data-theme="light"] #cta {
+  background: transparent;
+}
+
+[data-theme="light"] .card-lien {
+  color: var(--bleu-electrique);
+}
+
+[data-theme="light"] .tech-tag {
+  background: rgba(184,134,11,0.08);
+  border-color: rgba(184,134,11,0.2);
+  color: var(--bleu-electrique);
+}

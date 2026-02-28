@@ -82,3 +82,38 @@ function afficherToast(message) {
     toast.classList.remove('visible');
   }, 3500);
 }
+
+// ════════════════════════════════════════
+// THEME TOGGLE — Dark / Light
+// ════════════════════════════════════════
+
+const themeToggle = document.getElementById('themeToggle');
+
+// Récupérer le thème sauvegardé
+const themeSauvegarde = localStorage.getItem('mhan_theme') || 'dark';
+document.documentElement.setAttribute('data-theme', themeSauvegarde);
+
+// Appliquer le thème au chargement
+function appliquerTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('mhan_theme', theme);
+}
+
+// Toggle au clic
+if (themeToggle) {
+  themeToggle.addEventListener('click', function() {
+    const themeActuel = document.documentElement
+      .getAttribute('data-theme');
+    const nouveauTheme = themeActuel === 'dark' ? 'light' : 'dark';
+    appliquerTheme(nouveauTheme);
+
+    // Animation rotation
+    themeToggle.style.transform = 'rotate(360deg)';
+    setTimeout(function() {
+      themeToggle.style.transform = '';
+    }, 400);
+  });
+}
+
+// Appliquer immédiatement au chargement
+appliquerTheme(themeSauvegarde);
