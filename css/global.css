@@ -624,3 +624,92 @@ footer {
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ════════════════════════════════════════
+   BOUTON RETOUR EN HAUT
+════════════════════════════════════════ */
+.btn-haut {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-bleu);
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 800;
+  box-shadow: var(--glow);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-haut.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-haut:hover {
+  box-shadow: var(--glow-fort);
+  transform: translateY(-4px);
+}
+
+/* ════════════════════════════════════════
+   BOUTON WHATSAPP
+════════════════════════════════════════ */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 28px;
+  width: 54px;
+  height: 54px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 800;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+}
+
+/* ── Tooltip WhatsApp ── */
+.btn-whatsapp::before {
+  content: 'Contactez-nous !';
+  position: absolute;
+  right: 64px;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-whatsapp:hover::before {
+  opacity: 1;
+}
+
+/* ── Mode clair ── */
+[data-theme="light"] .btn-haut {
+  box-shadow: 0 4px 20px rgba(30,41,59,0.2);
+}
