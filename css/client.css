@@ -468,3 +468,98 @@
 [data-theme="light"] #page-client .section-tag { color: #475569; }
 [data-theme="light"] #page-client .section-titre { color: #0f172a; }
 [data-theme="light"] #page-client .section-sous-titre { color: #64748b; }
+
+/* ── MODE CLAIR — ESPACE CLIENT ── */
+[data-theme="light"] #page-client {
+  background: #ffffff !important;
+}
+
+[data-theme="light"] .client-bg {
+  background: linear-gradient(135deg,
+    rgba(30,41,59,0.04) 0%,
+    rgba(248,250,252,1) 100%) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .client-wrapper {
+  background: transparent;
+}
+
+[data-theme="light"] .client-infos .section-tag {
+  color: #475569;
+}
+
+[data-theme="light"] .client-infos .section-titre {
+  color: #0f172a;
+}
+
+[data-theme="light"] .client-infos > p {
+  color: #64748b;
+}
+
+[data-theme="light"] .client-feature {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+[data-theme="light"] .client-feature h4 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .client-feature p {
+  color: #64748b;
+}
+
+[data-theme="light"] .feature-icone {
+  background: rgba(30,41,59,0.08);
+  border-color: rgba(30,41,59,0.12);
+}
+
+[data-theme="light"] .auth-boite {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .auth-onglets {
+  background: #f1f5f9;
+}
+
+[data-theme="light"] .auth-onglet {
+  color: #64748b;
+}
+
+[data-theme="light"] .auth-onglet.actif {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: #ffffff;
+}
+
+[data-theme="light"] .auth-form input,
+[data-theme="light"] .auth-form select {
+  background: #f8fafc;
+  border-color: rgba(0,0,0,0.12);
+  color: #0f172a;
+}
+
+[data-theme="light"] .auth-form input::placeholder {
+  color: #94a3b8;
+}
+
+[data-theme="light"] .auth-form input:focus,
+[data-theme="light"] .auth-form select:focus {
+  border-color: #1e293b;
+  background: #ffffff;
+}
+
+[data-theme="light"] .auth-form label {
+  color: #475569;
+}
+
+[data-theme="light"] .auth-note {
+  color: #64748b;
+}
+
+[data-theme="light"] .auth-note a {
+  color: #1e293b;
+}
