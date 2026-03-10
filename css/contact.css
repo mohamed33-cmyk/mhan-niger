@@ -311,3 +311,16 @@
   .contact-formulaire { padding: 32px 24px; }
   .form-row { grid-template-columns: 1fr; }
 }
+/* ── MODE CLAIR — HERO CONTACT ── */
+[data-theme="light"] #hero-contact {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+}
+
+[data-theme="light"] #hero-contact .hero-contact-bg {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+  opacity: 1;
+}
+
+[data-theme="light"] #hero-contact .section-tag { color: #475569; }
+[data-theme="light"] #hero-contact .section-titre { color: #0f172a; }
+[data-theme="light"] #hero-contact .section-sous-titre { color: #64748b; }

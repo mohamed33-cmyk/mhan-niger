@@ -571,3 +571,16 @@
   }
 
 }
+/* ── MODE CLAIR — HERO APROPOS ── */
+[data-theme="light"] #hero-apropos {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+}
+
+[data-theme="light"] #hero-apropos .hero-apropos-bg {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+  opacity: 1;
+}
+
+[data-theme="light"] #hero-apropos .section-tag { color: #475569; }
+[data-theme="light"] #hero-apropos .section-titre { color: #0f172a; }
+[data-theme="light"] #hero-apropos .section-sous-titre { color: #64748b; }

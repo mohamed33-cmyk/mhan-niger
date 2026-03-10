@@ -371,3 +371,17 @@
   }
 
 }
+
+/* ── MODE CLAIR — HERO SERVICES ── */
+[data-theme="light"] #hero-services {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+}
+
+[data-theme="light"] #hero-services .hero-services-bg {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+  opacity: 1;
+}
+
+[data-theme="light"] #hero-services .section-tag { color: #475569; }
+[data-theme="light"] #hero-services .section-titre { color: #0f172a; }
+[data-theme="light"] #hero-services .section-sous-titre { color: #64748b; }

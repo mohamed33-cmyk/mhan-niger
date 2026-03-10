@@ -454,3 +454,17 @@
   .dash-stats { grid-template-columns: repeat(2, 1fr); }
   .dash-header { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+/* ── MODE CLAIR — ESPACE CLIENT ── */
+[data-theme="light"] #page-client {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+}
+
+[data-theme="light"] .client-bg {
+  background: linear-gradient(180deg, #f8fafc, #ffffff) !important;
+  opacity: 1;
+}
+
+[data-theme="light"] #page-client .section-tag { color: #475569; }
+[data-theme="light"] #page-client .section-titre { color: #0f172a; }
+[data-theme="light"] #page-client .section-sous-titre { color: #64748b; }
