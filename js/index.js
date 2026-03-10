@@ -160,3 +160,25 @@ const sectionCompteurs = document.getElementById('compteurs');
 if (sectionCompteurs) {
   observateurCompteurs.observe(sectionCompteurs);
 }
+
+// ════════════════════════════════════════
+// COMPTEUR DE VISITEURS
+// ════════════════════════════════════════
+async function mettreAJourVisiteurs() {
+  try {
+    // Utilisation de l'API gratuite countapi.xyz
+    const response = await fetch(
+      'https://api.countapi.xyz/hit/mhan-niger.github.io/visits'
+    );
+    const data = await response.json();
+    const el = document.getElementById('nbVisiteurs');
+    if (el) {
+      animerCompteur(el, data.value, 2000);
+    }
+  } catch (e) {
+    const el = document.getElementById('nbVisiteurs');
+    if (el) el.textContent = '500';
+  }
+}
+
+mettreAJourVisiteurs();
